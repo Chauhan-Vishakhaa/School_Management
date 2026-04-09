@@ -1,4 +1,4 @@
-
+require('dotenv').config(); 
 
 function validateAddSchool(req, res, next) {
   const { name, address, latitude, longitude } = req.body;
