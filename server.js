@@ -3,6 +3,7 @@ const express = require('express');
 const db = require('./db');
 const cors = require('cors')
 const { validateAddSchool, validateListSchools } = require('./middleware/validate');
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 app.use(cors())
@@ -61,6 +62,6 @@ app.get('/listSchools',validateListSchools, async (req, res) => {
 
 
 
-app.listen(3000,()=>{
+app.listen(PORT,()=>{
     console.log("Server is Running")
 })
