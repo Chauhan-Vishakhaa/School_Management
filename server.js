@@ -62,6 +62,7 @@ app.get('/listSchools',validateListSchools, async (req, res) => {
 
 
 
-app.listen(PORT, ()=> {
-    console.log("Server is Running")
+
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server is running on port ${PORT}`);
 });
